@@ -2,13 +2,8 @@ import mods.artisanworktables.builder.RecipeBuilder;
 import mods.jei.JEI.removeAndHide;
 
 recipes.remove(<minecraft:crafting_table>);
-
-recipes.addShapeless(<artisanworktables:workshop:5>, [ //basic workshop - crafting table
-	[<forestry:wood_pile>, <forestry:wood_pile>],
-	[<forestry:wood_pile>, <forestry:wood_pile>],
-	]);
 	
-recipes.addShaped(<artisanworktables:workshop:5>, [ //basic workshop - crafting table
+recipes.addShaped(<artisanworktables:workshop:5>, [ //basic workshop
 	[<forestry:wood_pile>, <forestry:wood_pile>, <forestry:wood_pile>],
 	[<forestry:wood_pile>, <ore:chestWood>, <forestry:wood_pile>],
 	[<forestry:wood_pile>, <forestry:wood_pile>, <forestry:wood_pile>]
@@ -50,6 +45,19 @@ RecipeBuilder.get("basic") //mason's workshop
   .addTool(<ore:artisansChisel>, 1)
   .addTool(<ore:artisansFile>, 1)
   .addOutput(<artisanworktables:workshop:2>)
+  .create();
+  
+RecipeBuilder.get("mason") //blacksmith's workshop
+  .setShaped([
+    [<ore:ingotIron>, <minecraft:iron_block>, <minecraft:iron_block>, <minecraft:iron_block>, <ore:ingotIron>],
+    [<ore:ingotIron>, <ore:ingotPrometheum>, <ore:ingotPrometheum>, <ore:ingotPrometheum>, <ore:ingotIron>],
+    [<ore:ingotIron>, <ore:blockPrometheum>, <binniecore:storage:3>, <ore:blockPrometheum>, <ore:ingotIron>],
+    [<ore:planksT1>, <forestry:wood_pile>, <forestry:wood_pile>, <forestry:wood_pile>, <ore:planksT1>],
+    [<ore:planksT1>, <forestry:wood_pile>, <forestry:wood_pile>, <forestry:wood_pile>, <ore:planksT1>]])
+  .addTool(<ore:artisansTSquare>, 1)
+  .addTool(<ore:artisansHammer>, 1)
+  .addTool(<ore:artisansFile>, 1)
+  .addOutput(<artisanworktables:workshop:3>)
   .create();
 
 //hide low-tier worktables/stations

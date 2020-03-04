@@ -1,5 +1,6 @@
 import mods.artisanworktables.builder.RecipeBuilder;
 
+recipes.remove(<minecraft:furnace>);
 RecipeBuilder.get("mason") //mason workshop - furnace
   .setShaped([
     [<astralsorcery:blockblackmarble>, <ore:cobblestone>, <ore:cobblestone>, <ore:cobblestone>, <astralsorcery:blockblackmarble>],
